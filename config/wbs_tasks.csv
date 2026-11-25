@@ -1,0 +1,13 @@
+﻿task_id,task_name,short_name,predecessors,a,m,b
+T01,需求分析与范围确认,Requirements,,3,4,6
+T02,系统架构与技术方案设计,Architecture,T01,3,4,7
+T03,数据库与数据模型设计,Database,T01,2,3,5
+T04,电影与评分数据准备,Data prep,T01,2,4,7
+T05,后端基础框架与DAO开发,Backend,T02;T03,4,6,10
+T06,用户与管理员模块开发,User/admin,T05,4,6,10
+T07,电影与内容管理模块开发,Movie/content,T05,5,7,12
+T08,用户互动与社区模块开发,Interaction,T06;T07,4,6,11
+T09,在线推荐功能开发与接入,Online rec,T06;T07;T08,5,8,14
+T10,独立混合推荐实验与权重调优,Offline exp,T04,5,8,14
+T11,前端集成与系统测试,Integration,T02;T06;T07;T08;T09,6,9,15
+T12,部署、验收与交付,Release,T10;T11,2,3,6
